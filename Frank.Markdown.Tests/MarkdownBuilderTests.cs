@@ -245,7 +245,7 @@ public class MarkdownBuilderTests
         
         // Assert
         _outputHelper.WriteLine(result);
-        Assert.Equal("| Name | Value | Vector | Version |\n| --- | --- | --- | --- |\n| Name 1 | 1 | <1\u00a0 2> | 1.2.3 |\n| Name 2 | 2 | <3\u00a0 4> | 4.5.6 |\n", result);
+        Assert.Equal("| Name | Value | Vector | Version |\n| --- | --- | --- | --- |\n| Name 1 | 1 | <1, 2> | 1.2.3 |\n| Name 2 | 2 | <3, 4> | 4.5.6 |\n", result, StringComparer.InvariantCulture);
     }
     
     [Fact]

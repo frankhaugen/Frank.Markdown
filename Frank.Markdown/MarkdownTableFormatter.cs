@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Frank.Markdown;
 
 internal static class MarkdownTableFormatter
@@ -26,15 +28,20 @@ internal static class MarkdownTableFormatter
             return string.Empty;
 
         if (IsSimpleType(type) || HasCustomToString(value))
-            return value.ToString()?.ReplaceLineEndings(string.Empty) ?? string.Empty;
+            return ToInvariantString(value)?.ReplaceLineEndings(string.Empty) ?? string.Empty;
 
         return "{}";
     }
 
     private static bool HasCustomToString(object? obj)
     {
-        var toString = obj?.ToString();
+        var toString = ToInvariantString(obj);
         return !string.IsNullOrEmpty(toString) && toString != obj?.GetType().ToString() && toString.Length < 128;
+    }
+    
+    private static string? ToInvariantString(this object? obj)
+    {
+        return Convert.ToString(obj, CultureInfo.InvariantCulture);
     }
 
     private static bool IsSimpleType(Type type)
