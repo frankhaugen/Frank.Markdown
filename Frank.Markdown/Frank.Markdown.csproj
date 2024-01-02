@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-<!--        <Description>Markdown is the most sensible way to write documentation, and here is a sensible way to generate it in C#, using a fluent API.</Description>-->
+        <Description>Markdown is the most sensible way to write documentation, and here is a sensible way to generate it in C#, using a fluent API.</Description>
         <PackageTags>markdown, documentation, fluent, api, csharp, dotnet, dotnetcore, table</PackageTags>
     </PropertyGroup>
-
+    
 </Project>

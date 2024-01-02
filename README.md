@@ -42,7 +42,7 @@ var table = new MarkdownTable<MarkdownTableTestRow>(new List<MarkdownTableTestRo
 });
 var alert = new MarkdownAlert("Urgent info that needs immediate user attention to avoid problems.", MarkdownAlertLevel.Warning);
 
-var builder = new MarkdownBuilder();
+var builder = new MarkdownDocument();
     .With(section1)
     .WithHeader(section2)
     .WithOrderedList(orderedList)
