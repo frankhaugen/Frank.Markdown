@@ -19,6 +19,13 @@ public class MarkdownDocumentTests
     }
 
     [Fact]
+    public void CreateFromString_Should_Return_MarkdownDocument()
+    {
+        var doc = MarkdownDocument.Create("# Example", "Examples is my thing.");
+        Assert.Equal("# Example\n\nExamples is my thing.\n\n", doc.ToString());
+    }
+
+    [Fact]
     public void Append_AddSection_ReturnsSelf()
     {
         // Arrange
