@@ -1,3 +1,5 @@
+> **Moved to Novolis:** This library is superseded by [`Novolis.Markup.Markdown`](https://www.nuget.org/packages/Novolis.Markup.Markdown) from [novolis-markup](https://github.com/Novolis-Platform/novolis-markup). This repository is archived; do not add features here.
+
 # Frank.Markdown
 
 A great fluent API for creating markdown documents in C#.
